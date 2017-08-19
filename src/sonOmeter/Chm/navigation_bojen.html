@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- InstanceBegin template="/Templates/sonOmeter_chm.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<title>sonOmeter.de - Sonarsoftware</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<!-- InstanceBeginEditable name="head" -->
+	<!-- InstanceEndEditable -->
+	<link rel="stylesheet" href="css/index.css">
+	<meta name="keywords" content="sonar, beam, multibeam, echolot, software, sidescan">
+</head>
+<body bgcolor="#FFF5C2">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" valign="top" bgcolor="#FFF5C2">
+				<table width="610" border="1" cellpadding="5" cellspacing="0" bordercolor="#333333">
+					<tr>
+						<td align="left" valign="top" bordercolor="#000000" bgcolor="#FFF5C2">
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFF5C2">
+								<tr align="left" valign="top">
+									<td width="64%">
+										<img src="imgs/sonometer.de.gif" width="429" height="27"></td>
+									<td width="36%" rowspan="3" align="right">
+										<img src="imgs/colorlogo.gif" width="119" height="71"></td>
+								</tr>
+								<tr align="left" valign="top">
+									<td>
+										<img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif" width="36"
+											height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+												width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+													width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+														width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+															width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+																width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rende.gif"
+																	width="5" height="24"></td>
+								</tr>
+								<tr align="left" valign="top">
+									<td style="height: 16px">
+										<!-- InstanceBeginEditable name="Jumps" -->
+										Navigation - Bojen und Korridore</td>
+								</tr>
+								<tr align="left" valign="top">
+									<td colspan="2">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table width="610" border="0" cellpadding="5" cellspacing="0">
+					<tr>
+						<td align="left" valign="top" style="width: 621px">
+							<!-- InstanceBeginEditable name="main" -->
+							<p>
+								Zur Unterstützung der Navigation, insbesondere das Befahren definierter Korridore,
+								können sogenannte Bojen angelegt werden. Dies sind Punktobjekte im 2D-Betrachtungsfenster,
+								die Neben der Koordinate noch eine bestimmte Farbe und Beschreibung erhalten können.</p>
+							<p>
+								Eine Boje kann über zwei Wege erzeugt werden:</p>
+							<ol>
+								<li>Im 2D-Betrachtungsfenster die <a href="tastatur_2D.html">Tastenkombination</a> Strg+B
+									verwenden. Der Mauszeiger ändert sich und es wird eine Boje mit der linken Maustaste
+									platziert.</li>
+								<li>Im Sonarschnitt die <a href="tastatur_record.html">Tastenkombination</a> Strg+B
+									verwenden. Der Mauszeiger ändert sich und es wird eine Boje mit der linken Maustaste
+									platziert. Voraussetzung ist eine mit der Sonarlinie verknüpfte Koordinate.</li>
+								<li>Im <a href="form_project.html">Projektbaum</a> die "Buoylist" öffnen.</li>
+							</ol>
+							<p>
+								Mit den Schaltflächen "Add" und "Remove" können Bojen hinzugefügt und auch gelöscht
+								werden. Analog werden Verbindungen zwischen Bojen angelegt (s.u.). Mit "Save" und
+								"Load" wird die Bojenliste samt ihren Verbindungen in eine separate XML-Datei gespeichert
+								bzw. aus einer solchen geladen. Das akutelle Projekt bleibt davon unberührt. Die
+								Bojen werden ebenfalls mit dem Projekt mitgespeichert und geladen. Die Schaltfläche
+								"Clear" löscht die Listen.</p>
+							<p>
+								<img alt="Formular Bojen" src="imgs/form_buoylist_editbuoy.PNG" />
+							</p>
+							<p>
+								Durch Auswahl einer Boje in der oberen Liste ändert sich die Detailbetrachtung rechts
+								- es werden die Eigenschaften der Boje angezeigt.
+							</p>
+							<table border="0" width="600">
+								<tr>
+									<td style="font-weight: bold; width: 90px">
+										Coordinate</td>
+									<td style="width: 554px">
+										Die Koordinate der Boje (siehe <a href="koordinaten_editor.html">Koordinaten-Editor</a>)</td>
+								</tr>
+								<tr>
+									<td style="font-weight: bold; width: 90px;">
+										Depth</td>
+									<td style="height: 16px; width: 554px;">
+										Die Tiefe der Boje (bezogen auf Wasseroberfläche)</td>
+								</tr>
+								<tr>
+									<td style="font-weight: bold; width: 90px; height: 16px;">
+										Color</td>
+									<td style="width: 554px; height: 16px;">
+										Die Darstellungsfarbe</td>
+								</tr>
+								<tr>
+									<td style="font-weight: bold; width: 90px">
+										Description</td>
+									<td style="width: 554px">
+										Eine ergänzende Beschreibung</td>
+								</tr>
+								<tr>
+									<td style="font-weight: bold; width: 90px; height: 16px;">
+										ID</td>
+									<td style="width: 554px; height: 16px;">
+										Eine eineindeutige Nummer (innerhalb der Bojenliste)</td>
+								</tr>
+								<tr>
+									<td style="font-weight: bold; width: 90px; height: 16px">
+										Type</td>
+									<td style="width: 554px; height: 16px">
+										Eine frei wählbare Typ-Nummer für die Boje</td>
+								</tr>
+							</table>
+							<p>
+								Zwischen den Bojen können Verbindungslinien angezeigt werden. Diese müssen vom Anwender
+								spezifiziert werden. Dafür gibt es die zweite Liste "Connections". Beim Hinzufügen
+								einer neuen Bojenverbindung wird der Anwender aufgefordert, die Start- und Zielboje
+								auszuwählen. Die Verbindung trägt als Standardeinstellung eine Beschreibung mit
+								den IDs der beiden Bojen in der Form "[Startbojen-ID] - [Zielbojen-ID]". Diese kann
+								nachträglich geändert werden.</p>
+							<p>
+								<img alt="Formular Bojen" src="imgs/form_buoylist_editconn.PNG" id="IMG1" />&nbsp;</p>
+							<p>
+								Durch Auswahl einer Bojenverbindung in der untern Liste ändert sich die Detailbetrachtung
+								rechts - es werden die Eigenschaften der Verbindung angezeigt.</p>
+							<p>
+								<table border="0" width="600">
+									<tr>
+										<td style="font-weight: bold; width: 170px">
+											Start Buoy</td>
+										<td style="width: 554px">
+											Die Startboje (nicht editierbar)</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px;">
+											End Buoy</td>
+										<td style="width: 554px; height: 16px;">
+											Die Zielboje (nicht editierbar)</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px">
+											Catch Corridor Width</td>
+										<td style="width: 554px; height: 16px">
+											Die absolute Fangweite für die Navigation (&gt;= Korridorbreite)</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px;">
+											Corridor Width</td>
+										<td style="height: 16px; width: 554px;">
+											Eine optionale Korridorbreite (absolute Breite)</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px;">
+											Transparency</td>
+										<td style="width: 554px; height: 16px">
+											Transparenz des Korridors in der 2D-Darstellung</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px;">
+											Color</td>
+										<td style="width: 554px; height: 16px;">
+											Farbe der Verbindung</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px">
+											Description</td>
+										<td style="width: 554px">
+											Eine ergänzende Beschreibung</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px;">
+											Highlight Color</td>
+										<td style="width: 554px; height: 16px;">
+											Farbe der Verbindung (Schiff ist auf Korridor eingerastet)</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px">
+											ID</td>
+										<td style="width: 554px; height: 16px">
+											Eine eineindeutige Nummer (innerhalb der Verbindungsliste)</td>
+									</tr>
+									<tr>
+										<td style="font-weight: bold; width: 170px; height: 16px;">
+											Line Width</td>
+										<td style="width: 554px; height: 16px">
+											Die Linienbreite der Verbindung</td>
+									</tr>
+								</table>
+							</p>
+							<p>
+								Ergänzend zur Verbindungsline kann ein dazu zentriert verlaufender Korridor definiert
+								werden (Eigenschaft "Corridor Width"). Das Programm versucht dann während der Aufnahme
+								den nächstgelegenen Korridor zu erfassen und hebt diesen hervor (siehe Bild unten).
+								Zusätzlich wird die Entfernung des Bootes von der Idealline akustisch (abschaltbar)
+								und optisch angezeigt.</p>
+							<p>
+								<img alt="Formular Manuelle Eingabe" src="imgs/form_2D_track_nav.jpg" />&nbsp;</p>
+							<p>
+								Der Balken rechts unten stellt die Abweichung von der Idealline dar. Er verfärbt
+								sich von grün in gelb bis zum Rand des Korridors und danach weiter in rot bis zur
+								durch die Fangweite eingestellte Entfernung zur Idealline. Die akustische Signalisierung
+								steigert die Tonhöhe mit wachsendem Abstand zur Idealline (keine Unterscheidung
+								der Lage) und verstummt beim Überschreiten der doppelten Entferung zur Verbindung.</p>
+						</td>
+					</tr>
+				</table>
+				<br>
+				<p>
+					&nbsp;</p>
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+	<p>
+		&nbsp;</p>
+	<p>
+		&nbsp;</p>
+</body>
+<!-- InstanceEnd -->
+</html>

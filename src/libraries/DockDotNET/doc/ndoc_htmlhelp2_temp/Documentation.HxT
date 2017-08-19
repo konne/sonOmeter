@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HelpTOC SYSTEM "MS-Help://Hx/Resources/HelpTOC.DTD"[]>
+<HelpTOC DTDVersion="1.0" LangId="1033">
+  <HelpTOCNode Url="/html/ndocDockDotNET_70693cd2.html">
+    <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassTopic_21e953e2.html">
+      <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassMembersTopic_21e953e2.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassConstructorTopic_21e953e2.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassctorTopic1_11a56af6.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassctorTopic2_cdcbcb1c.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassFieldsTopic_21e953e2.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClasscontainerListTopic_5e67279b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassdisableOnControlRemoveTopic_b71ed44a.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassisActiveTopic_5c46bb68.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassisDragContainerTopic_8b7eea53.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClasspanelListTopic_8ca685ea.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassremoveableTopic_607dc292.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassPropertiesTopic_21e953e2.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassDockBorderTopic_6746fac7.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassDockTypeTopic_a0008e73.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassShowIconsTopic_28470533.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassSplitterWidthTopic_2694e37f.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassTopLevelContainerTopic_48054412.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassMethodsTopic_21e953e2.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassAddPanelTopic_09493ca4.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassAdjustBordersTopic_f835a4d7.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassCloseClickTopic_95abcd9e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassDisposeTopic_8a1fa19b.html">
+          <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassDisposeTopic2_65fb9c6c.html" />
+        </HelpTOCNode>
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassDockWindowTopic_02a04730.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassDragWindowTopic_d41cdddf.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassGetNextChildTopic_e5b97f9b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassGetTargetTopic_a21de58b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassHitTestTopic_cecd8a3e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassInvokeKeyDownTopic_5009c97e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassInvokeKeyUpTopic_357c5289.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassIsInputKeyTopic_1e28131a.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnControlAddedTopic_18da18cf.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnControlRemovedTopic_7e54a30d.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnEnterTopic_8940077d.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnLeaveTopic_fb7495ae.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnMouseDownTopic_14762c5d.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnMouseLeaveTopic_24c033cf.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnMouseMoveTopic_49c3ee7e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnMouseUpTopic_6885262a.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnPaintTopic_1bf6bd2f.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnParentChangedTopic_1ea1194b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnResizeTopic_9e761e07.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassOnSizeChangedTopic_96186b92.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassRemoveContainerTopic_da9eaf3c.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassSelectTabTopic_69b00153.html">
+          <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassSelectTabTopic2_45a659d3.html" />
+          <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassSelectTabTopic1_fc6ac752.html" />
+        </HelpTOCNode>
+        <HelpTOCNode Url="/html/ndocDockDotNETDockContainerClassUndockClickTopic_e2f9e330.html" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Url="/html/ndocDockDotNETDockContainerTypeClassTopic_dc82f55a.html" />
+    <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassTopic_264330ee.html">
+      <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassMembersTopic_264330ee.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassctorTopic_3b64adc6.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassPropertiesTopic_264330ee.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassDockTypeTopic_f65f8bff.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassPointTopic_857d1c28.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassReleaseTopic_7ef605ad.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockEventArgsClassTargetTopic_2b176155.html" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Url="/html/ndocDockDotNETDockEventHandlerClassTopic_5e0b5531.html" />
+    <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassTopic_2b65abf6.html">
+      <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassMembersTopic_2b65abf6.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassConstructorTopic_2b65abf6.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassctorTopic1_7d3d3862.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassctorTopic2_8de0a088.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassPropertiesTopic_2b65abf6.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassListDocumentTopic_7f30abf1.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassListPanelTopic_15f6d808.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassListToolTopic_84890206.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassMethodsTopic_2b65abf6.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassAddFormTopic_b4bc1955.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassDisposeTopic_33be628f.html">
+          <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassDisposeTopic2_fcb53af8.html" />
+        </HelpTOCNode>
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassOnControlAddedTopic_81d2a95b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassOnParentChangedTopic_286f41df.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockManagerClassRemoveFormTopic_e2809c52.html" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassTopic_b4a92bd3.html">
+      <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassMembersTopic_b4a92bd3.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassConstructorTopic_b4a92bd3.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassctorTopic1_2bff72c7.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassctorTopic2_69d39cad.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassPropertiesTopic_b4a92bd3.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassFormTopic_81fe77ef.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassTabRectTopic_446618ce.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassMethodsTopic_b4a92bd3.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassDisposeTopic_b7425aaa.html">
+          <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassDisposeTopic2_16ae899d.html" />
+        </HelpTOCNode>
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassIsInputKeyTopic_307937ab.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassOnMouseDownTopic_c9de498c.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassOnPaintTopic_b1dd937e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassSetFocusTopic_a317aca4.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassToStringTopic_b9afa72a.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassEventsTopic_b4a92bd3.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassActivatedTopic_1154a791.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassDeactivateTopic_ff2f3514.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockPanelClassPostPaintTopic_2f5785f6.html" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassTopic_50c88109.html">
+      <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassMembersTopic_50c88109.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassctorTopic_564b7957.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassFieldsTopic_50c88109.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClasscontrolContainerTopic_98bd3675.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassdockTypeTopic_ac456c4e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassdragWindowTopic_cbc2fb89.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClasshideOnCloseTopic_23f4cbe2.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassisDragWindowTopic_008b2b53.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassisLoadedTopic_a5094988.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClasslastHostTopic_93b9043f.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassmovingTopic_3fa771e1.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassptStartTopic_052ab2f1.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClasswasDockedTopic_17d122d2.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassPropertiesTopic_50c88109.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassControlContainerTopic_2f8502c3.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassDockTypeTopic_e7c7ae38.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassHideOnCloseTopic_96b86a14.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassHostContainerTopic_b0d03844.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassIsDockedTopic_ab91ff7b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassIsLoadedTopic_9a0d6d7e.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassIsVisibleTopic_ba92d5b7.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassMovingTopic_b96e1e17.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassWasDockedTopic_a491c8a4.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassMethodsTopic_50c88109.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassCreateContainerTopic_e41d503d.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassDisposeTopic_863c08f0.html">
+          <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassDisposeTopic2_78812367.html" />
+        </HelpTOCNode>
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassInvokeKeyDownTopic_b4298647.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassInvokeKeyUpTopic_e51829f0.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassOnClosingTopic_651a0645.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassOnLoadTopic_610bad38.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassOnMoveTopic_6af91faf.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassOnPaintTopic_c47a1e84.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassOnVisibleChangedTopic_5e688bd2.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassWndProcTopic_232094d6.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassEventsTopic_50c88109.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETDockWindowClassDragWindowTopic_ad756dca.html" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassTopic_6b06d1af.html">
+      <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassMembersTopic_6b06d1af.html" />
+      <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassConstructorTopic_6b06d1af.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassctorTopic1_00506b5b.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassctorTopic2_7e065d31.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassPropertiesTopic_6b06d1af.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassLightColorTopic_2323e946.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassPressedTopic_abdd25c3.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassShadowColorTopic_a362fd1e.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassMethodsTopic_6b06d1af.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassDisposeTopic_368cda56.html">
+          <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassDisposeTopic2_832f0b01.html" />
+        </HelpTOCNode>
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassOnMouseDownTopic_775b0490.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassOnMouseEnterTopic_1dff9351.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassOnMouseLeaveTopic_43acbe82.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassOnMouseUpTopic_a2daa1a7.html" />
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassOnPaintTopic_c6ef5262.html" />
+      </HelpTOCNode>
+      <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassEventsTopic_6b06d1af.html">
+        <HelpTOCNode Url="/html/ndocDockDotNETFlatButtonClassPostPaintTopic_d665d16a.html" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

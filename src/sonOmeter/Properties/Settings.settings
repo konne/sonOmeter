@@ -1,0 +1,52 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="sonOmeter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="mruList" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mru
+        </Value>
+    </Setting>
+    <Setting Name="Setting" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;GlobalSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+            &lt;SrcEllipsoid Name="Bessel" A="6377397.155" B="6356078.963" /&gt;
+            &lt;DstEllipsoid Name="WGS84" A="6378137" B="6356752.3142451793" /&gt;
+            &lt;SrcDatum DX="583" DY="68.2" DZ="399.1" RZ="1.2343356321048786E-05"
+              Sc="1.0000105201106715" Name="DHDN" /&gt;
+            &lt;DstDatum Name="WGS84" /&gt;
+            &lt;ExportSonarType&gt;Void&lt;/ExportSonarType&gt;
+            &lt;SECL&gt;
+              &lt;SonarEntryConfig SonarID="0" XmlSonarColor="Cyan"  VolumeWeight="10" /&gt;
+              &lt;SonarEntryConfig SonarID="1" XmlSonarColor="Lime"   VolumeWeight="15" /&gt;
+              &lt;SonarEntryConfig SonarID="2" XmlSonarColor="Yellow"  VolumeWeight="22" /&gt;
+              &lt;SonarEntryConfig SonarID="3" XmlSonarColor="Orange"   VolumeWeight="33" /&gt;
+              &lt;SonarEntryConfig SonarID="4" XmlSonarColor="Magenta"   VolumeWeight="47" /&gt;
+              &lt;SonarEntryConfig SonarID="5" XmlSonarColor="Red"  VolumeWeight="68" /&gt;
+              &lt;SonarEntryConfig SonarID="6" XmlSonarColor="Black"  VolumeWeight="100" /&gt;
+            &lt;/SECL&gt;
+            &lt;Arch Depth="0.1" Active="false" StopAtStrongLayer="false" /&gt;
+            &lt;colors /&gt;
+          &lt;/GlobalSettings&gt;</Value>
+    </Setting>
+    <Setting Name="UseNewRecordWindows" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frmExport3D_CreateFileZ" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frmExport3D_CreateFileC" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frmExport3D_CreateFileV" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frmExport3D_CreateFileB" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frmExport3D_CoordTypeLALO" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="frmExport3D_SonarTypeNF" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

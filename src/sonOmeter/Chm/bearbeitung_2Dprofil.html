@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- InstanceBegin template="/Templates/sonOmeter_chm.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <title>sonOmeter.de - Sonarsoftware</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="keywords" content="sonar, beam, multibeam, echolot, software, sidescan">
+    <style type="text/css">
+        .style1
+        {
+            height: 16px;
+            width: 117px;
+        }
+        .style2
+        {
+            width: 117px;
+        }
+    </style>
+</head>
+<body bgcolor="#FFF5C2">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td align="center" valign="top" bgcolor="#FFF5C2">
+                <table width="610" border="1" cellpadding="5" cellspacing="0" bordercolor="#333333">
+                    <tr>
+                        <td align="left" valign="top" bordercolor="#000000" bgcolor="#FFF5C2">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFF5C2">
+                                <tr align="left" valign="top">
+                                    <td width="64%">
+                                        <img src="imgs/sonometer.de.gif" width="429" height="27"></td>
+                                    <td width="36%" rowspan="3" align="right">
+                                        <img src="imgs/colorlogo.gif" width="119" height="71"></td>
+                                </tr>
+                                <tr align="left" valign="top">
+                                    <td>
+                                        <img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif" width="36"
+                                            height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+                                                width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+                                                    width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+                                                        width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+                                                            width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rssss.gif"
+                                                                width="36" height="24"><img src="imgs/rssss.gif" width="36" height="24"><img src="imgs/rende.gif"
+                                                                    width="5" height="24"></td>
+                                </tr>
+                                <tr align="left" valign="top">
+                                    <td>
+                                        <!-- InstanceBeginEditable name="Jumps" -->
+                                        Bearbeitung - 2D Profil erzeugen
+                                        <!-- InstanceEndEditable -->
+                                    </td>
+                                </tr>
+                                <tr align="left" valign="top">
+                                    <td colspan="2">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <table width="610" border="0" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <td align="left" valign="top">
+                            <!-- InstanceBeginEditable name="main" -->
+                            <p>
+                                Entlang einer Bojenverbindung kann mit dieser Funktion ein neuer Datensatz (Record)
+                                mittels Interpolations der darin enthaltenen Sonardaten erzeugt werden. Dieser Datensatz
+                                kann sowohl direkt exportiert als auch als neuer Record in das Projekt aufgenommen werden.
+                                Im Folgenden werden alle Einstellungen anhand der Abbildung erklärt:
+                            </p>
+                            <p>
+                                <img alt="Formular 2D Profil erstellen" src="imgs/form_2D_profile.PNG" />
+                            </p>
+                            <p>
+                                Die Liste im oberen Bereich stellt alle verfügbaren Bojenverbindungen dar. Es 
+                                muss <b>mindestens eine</b> dieser Verbindungen ausgewählt sein, damit mit eine 
+                                Interpolation entlang dieser Linie durchgeführt werden kann. Es können auch 
+                                mehrere Linien ausgewählt werden, welche dann jeweils für sich berechnet werden.
+                                <b>Grundsätzlich ist es wichtig</b>, dass im <a href="form_project.html">
+                                Projektfenster</a> alle Records und / oder Sonare mit einem Haken versehen sind, 
+                                die für die Interpolation heran gezogen werden sollen. Es sind nun folgende 
+                                Optionen wählbar:</p>
+                            <p>
+                                <table border="0" width="600">
+                                    <tr>
+                                        <td class="style1" style="font-weight: bold;">
+                                            One File</td>
+                                        <td style="width: 554px; height: 16px">
+                                            Erzeugt nur eine Export-Datei bei mehreren gewählten Verbindungen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="style1" style="font-weight: bold;">
+                                            Normalize Sonar Lines</td>
+                                        <td style="width: 554px; height: 16px">
+                                            Die im Korridor einer Bojenverbindung gefundenen Sonarlinien werden auf die 
+                                            Linie der Bojenverbindung normalisiert.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="style1" style="font-weight: bold;">
+                                            Normalize Manual Points</td>
+                                        <td style="width: 554px; height: 16px">
+                                            Die im Korridor einer Bojenverbindung gefundenen Manuellen Punkte werden auf die 
+                                            Linie der Bojenverbindung normalisiert.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="style2" style="font-weight: bold;">
+                                            Merge Manual Points</td>
+                                        <td style="width: 554px">
+                                            Für den Fall einer Abtastung (siehe Sampling Resolution) werden damit auch die 
+                                            Manuellen Punkte zusammengefasst.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="style1" style="font-weight: bold;">
+                                            Manual Points dominate</td>
+                                        <td style="width: 554px; height: 16px">
+                                            Sind in einem Abtastsektor sowohl Sonarlinien als auch Manuelle Punkte 
+                                            vorhanden, werden letztere verwendet (siehe Sampling Resolution).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="style1" style="font-weight: bold;">
+                                            Add Buoys as Manual Point</td>
+                                        <td style="width: 554px; height: 16px">
+                                            Die Start- und Endbojen der Verbindung werden mit als Manuelle Punkte an die 
+                                            entsprechenden Stellen eingefügt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="style1" style="font-weight: bold;">
+                                            Sampling Resolution</td>
+                                        <td style="width: 554px; height: 16px">
+                                            Dieser Wert gibt die Auflösung der Abtastung in Metern vor. Der Wert 0 wird als 
+                                            Deaktivierung dieser Funktion interpretiert.</td>
+                                    </tr>
+                                </table>
+                            </p>
+                            <p>
+                                Die Schaltflächen am unteren Rand des Fensters erzeugen eine oder mehrere 
+                                Export-Dateien (&quot;Export Data&quot;), einen oder mehrere neue Record (&quot;New Records&quot;) 
+                                bzw. dienen dem Verlassen des Fensters.</p>
+                            <!-- InstanceEndEditable -->
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <p>
+                    &nbsp;</p>
+                <p>
+                    &nbsp;</p>
+            </td>
+        </tr>
+    </table>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+</body>
+<!-- InstanceEnd -->
+</html>

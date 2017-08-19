@@ -1,0 +1,1223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DockDotNET</name>
+    </assembly>
+    <members>
+        <member name="T:DockDotNET.FormLoadEventArgs">
+            <summary>
+            FormLoadEventArgs is used with FormLoadEventHandler to enable the main application to react properly on loaded windows from a previously saved hierarchy file.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FormLoadEventArgs.Form">
+            <summary>
+            Gets or sets the form that should be used for hierarchy load process.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FormLoadEventArgs.Type">
+            <summary>
+            Gets the type of the form that is to be loaded.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FormLoadEventArgs.Cancel">
+            <summary>
+            Gets or sets the cancel flag.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.FormLoadEventArgs.#ctor(System.Type)">
+            <summary>
+            Creates a new FormLoadEventArgs object.
+            </summary>
+            <param name="type">The type of the form that is to be loaded.</param>
+        </member>
+        <member name="T:DockDotNET.FormLoadEventHandler">
+            <summary>
+            The event handler for DockManager.FormLoad events.
+            </summary>
+        </member>
+        <member name="T:DockDotNET.DockContainer">
+            <summary>
+            The <see cref="T:DockDotNET.DockContainer"/> class is derived from the standard framework class <see cref="T:System.Windows.Forms.Panel"/>.
+            It provides the basic functions to dock windows including the whole panel management.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DockDotNET.DockContainer"/> class.
+            </summary>
+            <param name="container">The host container.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DockDotNET.DockContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.Init">
+            <summary>
+            The central initialization method for all constructors.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainer.dockOffsetL">
+            <summary>
+            Needed for the DockManager to implement his autohide borders.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainer.dockOffsetT">
+            <summary>
+            Needed for the DockManager to implement his autohide borders.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainer.dockOffsetR">
+            <summary>
+            Needed for the DockManager to implement his autohide borders.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainer.dockOffsetB">
+            <summary>
+            Needed for the DockManager to implement his autohide borders.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.SplitterWidth">
+            <summary>
+            Gets or sets the width of the splitter.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.ShowIcons">
+            <summary>
+            Determines, if icons are shown in the panel tabs.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.DockType">
+            <summary>
+            Gets or sets the type of the container.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.DockBorder">
+            <summary>
+            Gets or sets the border of the active docking region.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.ActivePanel">
+            <summary>
+            Gets or sets the selected panel of the container.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.TopLevelContainer">
+            <summary>
+            Gets the top container of the current hierarchy.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockContainer.PanelCount">
+            <summary>
+            Gets the number of panels in the container.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overrides the base class function.
+            Draws borders and tabs.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.MeasurePanel(DockDotNET.DockPanel,System.Drawing.Graphics,System.Boolean,System.Drawing.Font)">
+            <summary>
+            Measures the size of a <see cref="T:DockDotNET.DockPanel"/> tab depending on a given font.
+            </summary>
+            <param name="panel">The <see cref="T:DockDotNET.DockPanel"/> object.</param>
+            <param name="graphics">The <see cref="T:System.Drawing.Graphics"/> interface.</param>
+            <param name="cut">Enables the reduction of the panel size according to the available space.</param>
+            <param name="font">The target font.</param>
+            <returns>The size of the panel tab.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnEnter(System.EventArgs)">
+            <summary>
+            Overrides the base class function.
+            Invokes an Invalidate after calling the base class function.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnLeave(System.EventArgs)">
+            <summary>
+            Overrides the base class function.
+            Invokes an Invalidate after calling the base class function.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Overrides the base class function.
+            Invokes an Invalidate after calling the base class function.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.HitTest(System.Drawing.Point)">
+            <summary>
+            Determines if a point is contained in the client region.
+            </summary>
+            <param name="pt">The point to test.</param>
+            <returns>True, if the point is in the client region.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.GetTarget(System.Drawing.Size,DockDotNET.DockContainerType,System.Drawing.Point)">
+            <summary>
+            Retrieves a container that matches a specific mouse location, when a window is dragged.
+            </summary>
+            <param name="srcSize">The size of the source object.</param>
+            <param name="type">The target container type.</param>
+            <param name="pt">The target position.</param>
+            <returns>A valid container or null, if no suitable container was found.</returns>*/
+        </member>
+        <member name="M:DockDotNET.DockContainer.SelectTab(System.Int32)">
+            <summary>
+            Selects a specific tab beginning with 0 from left to the right.
+            </summary>
+            <param name="i">The index of the tab.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.SelectTab(DockDotNET.DockPanel)">
+            <summary>
+            Selects a specific tab based on its reference pointer.
+            </summary>
+            <param name="p">The tab reference.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Overrides the base class function.
+            Before adding the control, the internal lists are updated depending on the type.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.ControlEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Overrides the base class function.
+            Before removing the control, the internal lists are updated depending on the type.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.ControlEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.AdjustBorders">
+            <summary>
+            Adjusts the <see cref="P:System.Windows.Forms.ScrollableControl.DockPadding"/> property and drag panel according to the state of the container.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.RemoveContainer(DockDotNET.DockContainer)">
+            <summary>
+            Removes a child container from the internal list and disposes it.
+            The other container will be transferred back to the host container at the call of the <see cref="M:DockDotNET.DockContainer.OnControlRemoved(System.Windows.Forms.ControlEventArgs)"/> method.
+            </summary>
+            <param name="cont">The <see cref="T:DockDotNET.DockContainer"/> that is to be removed.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.GetNextChild(DockDotNET.DockContainerType,DockDotNET.DockContainer)">
+            <summary>
+            Recursively resolves the <see cref="T:DockDotNET.DockContainer"/> hierarchy.
+            </summary>
+            <param name="type">The <see cref="T:DockDotNET.DockContainerType"/> of the child that is to be retrieved.</param>
+            <param name="last">The last hit on a suitable <see cref="T:DockDotNET.DockContainer"/>.</param>
+            <returns>The child <see cref="T:DockDotNET.DockContainer"/> object.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.GetPanels(System.Collections.ArrayList)">
+            <summary>
+            Recursively collects all panels in the hierarchy and adds them to the list.
+            </summary>
+            <param name="list">The list for all panels.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.TransferControls(DockDotNET.DockContainer)">
+            <summary>
+            Adds all controls of one container to this one.
+            </summary>
+            <param name="con">The former control container.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.ShowButtons">
+            <summary>
+            Shows all buttons depending on the type of the container.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.HideButtons">
+            <summary>
+            Hides all buttons.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnClose_Click(System.Object,System.EventArgs)">
+            <summary>
+            The Click event handler for the close button.
+            Closes the active panel and destoys the container, if needed.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnTabL_Click(System.Object,System.EventArgs)">
+            <summary>
+            The Click event handler for the tab left button.
+            Switches to the next tab to the left.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnTabR_Click(System.Object,System.EventArgs)">
+            <summary>
+            The Click event handler for the tab right button.
+            Switches to the next tab to the right.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+            The Menu event handler for the menu button.
+            Calls the context menu.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnAutoHide_Click(System.Object,System.EventArgs)">
+            <summary>
+            The AutoHide event handler for the menu button.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnClose_PostPaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The <see cref="E:DockDotNET.FlatButton.PostPaint"/> event handler of the close button.
+            Used for custom drawing.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the drawing data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnTabL_PostPaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The PostPaint event handler of the tab left button.
+            Used for custom drawing.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the drawing data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnTabR_PostPaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The <see cref="E:DockDotNET.FlatButton.PostPaint"/> event handler of the tab right button.
+            Used for custom drawing.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the drawing data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnMenu_PostPaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The <see cref="E:DockDotNET.FlatButton.PostPaint"/> event handler of the menu button.
+            Used for custom drawing.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the drawing data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.btnAutoHide_PostPaint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            The <see cref="E:DockDotNET.FlatButton.PostPaint"/> event handler of the menu button.
+            Used for custom drawing.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the drawing data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.DragWindow(System.Object,DockDotNET.DockEventArgs)">
+            <summary>
+            The <see cref="M:DockDotNET.DockContainer.DragWindow(System.Object,DockDotNET.DockEventArgs)"/> event handler for dockable windows.
+            Used to enable a <see cref="M:DockDotNET.DockContainer.DockWindow(DockDotNET.DockWindow,System.Windows.Forms.DockStyle)"/> to send its position changes to this container.
+            Calls recursively all <see cref="M:DockDotNET.DockContainer.DragWindow(System.Object,DockDotNET.DockEventArgs)"/> event handlers of the child containers.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:DockDotNET.DockEventArgs"/> that contains the docking data.</param>
+            <returns>The success of the operation.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.AddPanel(DockDotNET.DockPanel,DockDotNET.DockContainer)">
+            <summary>
+            Adds a <see cref="T:DockDotNET.DockPanel"/> to the container.
+            </summary>
+            <param name="src">The source panel.></param>
+            <param name="dst">The destination container.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.AddWindowContent(DockDotNET.DockContainer,DockDotNET.DockContainer)">
+            <summary>
+            Adds the content of a <see cref="T:DockDotNET.DockContainer"/> to the container.
+            </summary>
+            <param name="src">The source container.></param>
+            <param name="dst">The destination container.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.DockWindow(DockDotNET.DockWindow,System.Windows.Forms.DockStyle)">
+            <summary>
+            The direct version of the <see cref="M:DockDotNET.DockContainer.DragWindow(System.Object,DockDotNET.DockEventArgs)"/> event handler to dock a window into the container.
+            Can be used for every container.
+            </summary>
+            <param name="wnd">The <see cref="T:DockDotNET.DockForm"/> that is to be docked.</param>
+            <param name="style">The preferred dock style. Use <see cref="F:System.Windows.Forms.DockStyle.Fill"/> to dock directly into the container.</param>
+            <returns>The success of the operation.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.ReleaseWindow(DockDotNET.DockWindow)">
+            <summary>
+            Releases a <see cref="M:DockDotNET.DockContainer.DockWindow(DockDotNET.DockWindow,System.Windows.Forms.DockStyle)"/> from the container.
+            The container may destroy itself at the end of this procedure if it is empty and removeable.
+            </summary>
+            <param name="form">The <see cref="M:DockDotNET.DockContainer.DockWindow(DockDotNET.DockWindow,System.Windows.Forms.DockStyle)"/> that is to be released.</param>
+            <returns>The success of the operation.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.InvokeKeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Extends the key processing features of the base class (Panel).
+            This method is called recursively beginning from the top-level container.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs"/> that contains the key data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.InvokeKeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Extends the key processing features of the base class (<see cref="T:System.Windows.Forms.Panel"/>).
+            This method is called recursively beginning from the top-level container.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs"/> that contains the key data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>
+            Overrides the base class function to pass "true" at any time.
+            </summary>
+            <param name="keyData">The key data.</param>
+            <returns>True at any time.</returns>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnResize(System.EventArgs)">
+            <summary>
+            Overrides the base class function to adjust the sizes of the child containers.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnParentChanged(System.EventArgs)">
+            <summary>
+            Overrides the base class function to adjust the borders.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overrides the base class function to handle drag of panels and resizing.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overrides the base class function to handle drag of panels and resizing.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Overrides the base class function to disable the context menu.
+            </summary>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.dragPanel_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            The MouseDown event handler of the drag panel.
+            Used to handle resizing of the container.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.dragPanel_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            The MouseMove event handler of the drag panel.
+            Used to handle resizing of the container.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.dragPanel_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            The MouseUp event handler of the drag panel.
+            Used to handle resizing of the container.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.UpdateToolTip(System.Drawing.Point)">
+            <summary>
+            Updates the <see cref="T:System.Windows.Forms.ToolTip"/> and reorders the panels, if needed (mouse movement + LMB).
+            </summary>
+            <param name="pt">The pointer position.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.UndockClick(System.Object,System.EventArgs)">
+            <summary>
+            The message handler for the undock event of the context menu.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.CloseClick(System.Object,System.EventArgs)">
+            <summary>
+            The message handler for the close event of the context menu.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.WriteXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Writes the container data to the window save list.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlTextWriter"/> object that writes to the target stream.</param>
+        </member>
+        <member name="M:DockDotNET.DockContainer.ReadXml(System.Xml.XmlReader,System.Boolean)">
+            <summary>
+            Reads the container data from the window save list.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader"/> object that reads from the source stream.</param>
+            <param name="dockManagerHead">Indicates if this container is a direct subcontainer (DockStyle.Fill) of the DockManager object.</param>
+        </member>
+        <member name="T:DockDotNET.DockEventArgs">
+            <summary>
+            DockEventArgs is used with DockEventHandler to report docking requests of a moving DockWindow to DockManagers.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.Point">
+            <summary>
+            Gets the point where to dock the window.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.DockType">
+            <summary>
+            Gets the needed target container type.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.Release">
+            <summary>
+            Gets the state of the dock process. True, if dock is finally performed.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.Handled">
+            <summary>
+            Gets or sets the handled state of this event to prevent the framework from docking multiple times.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.ShowDockGuide">
+            <summary>
+            Gets or sets the flag that keeps the DockGuide open.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.IgnoreHierarchy">
+            <summary>
+            Gets or sets the flag that enables the possibility to dock into higher levels of the hierarchy.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockEventArgs.Target">
+            <summary>
+            Gets or sets the target retrieved by one of the containers.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockEventArgs.#ctor(System.Drawing.Point,DockDotNET.DockContainerType,System.Boolean)">
+            <summary>
+            Creates a new DockEventArgs object.
+            </summary>
+            <param name="point">The point where to dock the window.</param>
+            <param name="dockType">The needed target container type.</param>
+            <param name="release">The state of the dock process. True, if dock is finally performed.</param>
+        </member>
+        <member name="T:DockDotNET.DockEventHandler">
+            <summary>
+            The event handler for dock events.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockForm.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Since there are no non-client area notifications in .NET, this message loop hook is needed.
+            Captures a window move event and starts own movement procedure with an attached drag window.
+            </summary>
+            <param name="m">The Windows Message to process.</param>
+        </member>
+        <member name="M:DockDotNET.DockForm.CloseDragWindow">
+            <summary>
+            Closes the attached drag window.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockForm.MoveWindow">
+            <summary>
+            Invokes the drag event and adjusts the size and location if a valid docking position was received.
+            This method is only used by explicit drag windows (see flag).
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockForm.SendDockEvent(System.Boolean)">
+            <summary>
+            Invokes a drag event that accepts a valid position for docking.
+            </summary>
+            <param name="confirm">Set this flag to confirm the docking position, if available.</param>
+            <returns>Returns the target <see cref="T:DockDotNET.DockContainer"/>.</returns>
+        </member>
+        <member name="M:DockDotNET.DockForm.WriteXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Writes the form data to the window save list.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlTextWriter"/> object that writes to the target stream.</param>
+        </member>
+        <member name="M:DockDotNET.DockForm.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the form data from the window save list.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader"/> object that reads from the source stream.</param>
+        </member>
+        <member name="F:DockDotNET.DockForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DockDotNET.DockForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DockDotNET.DockVisualStyle">
+            <summary>
+            This enumator contains a list of available visual styles for the docking framework.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockVisualStyle.VS2003">
+            <summary>
+            A theme like the one in VS2003.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockVisualStyle.VS2005">
+            <summary>
+            A theme like the one in VS2005.
+            </summary>
+        </member>
+        <member name="T:DockDotNET.DockManager">
+            <summary>
+            This class is derived from the <see cref="T:DockDotNET.DockContainer"/> class to extend its features.
+            Use this class as top-level container in the destination windows of your application.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockManager.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <seealso cref="T:DockDotNET.DockManager"/> class.
+            </summary>
+            <param name="container">The host container.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.#ctor">
+            <summary>
+            Initializes a new instance of the <seealso cref="T:DockDotNET.DockManager"/> class.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.Init">
+            <summary>
+            Initializes the <seealso cref="T:DockDotNET.DockManager"/> (paint styles and startup containter type).
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.VisualStyle">
+            <summary>
+            Gets or sets the visual style of the docking framework.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.FastDrawing">
+            <summary>
+            Gets or sets the flag that controls fast, but less breathtaking drawing when a moving a window to enhance performance.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            Overrides the base class function <see cref="M:DockDotNET.DockContainer.OnControlAdded(System.Windows.Forms.ControlEventArgs)"/>.
+            It blocks any attempt of adding a control that is not a <see cref="T:DockDotNET.DockContainer"/>, <see cref="T:DockDotNET.DockPanel"/> or <see cref="T:DockDotNET.FlatButton"/>.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.ControlEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overrides the base class function.
+            Draws the panel descriptions of AutoHide members.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Expands the base class function with auto-hide checks.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Expands the base class function with auto-hide checks.
+            </summary>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.OnParentChanged(System.EventArgs)">
+            <summary>
+            Overrides the function <see cref="M:DockDotNET.DockContainer.OnParentChanged(System.EventArgs)"/>.
+            Tries to convert the parent into a form and then signs into some functions of the parent window.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.DeactivateParent(System.Object,System.EventArgs)">
+            <summary>
+            A message handler for the Deactivate event of the parent window.
+            Needed to refresh the child controls.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.ActivateParent(System.Object,System.EventArgs)">
+            <summary>
+            A message handler for the Activate event of the parent window.
+            Needed to refresh the child controls.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.WriteXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Writes the manager data to the window save list.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlTextWriter"/> object that writes to the target stream.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.ReadXml(System.Xml.XmlReader,System.Boolean)">
+            <summary>
+            Reads the manager data from the window save list.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader"/> object that reads from the source stream.</param>
+            <param name="dockManagerHead">Indicates if this container is a direct subcontainer (DockStyle.Fill) of the DockManager object.</param>
+        </member>
+        <member name="E:DockDotNET.DockManager.FormLoad">
+            <summary>
+            Is invoked when a form is loaded from a previously saved hierarchy file.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.ListPanel">
+            <summary>
+            Gets or sets the static <see cref="T:DockDotNET.DockPanel"/> collection.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.ListDocument">
+            <summary>
+            Gets or sets the static <see cref="T:DockDotNET.DockPanel"/> (document type) collection.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.ListTool">
+            <summary>
+            Gets or sets the static <see cref="T:DockDotNET.DockPanel"/> (tool type) collection.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.Style">
+            <summary>
+            Gets or sets the visual style of the docking framework.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockManager.FastMoveDraw">
+            <summary>
+            Gets or sets the flag that controls fast, but less breathtaking drawing when a moving a window to enhance performance.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.DebugFormList">
+            <summary>
+            A small helper function - writes the currently opened <see cref="T:DockDotNET.DockForm"/> objects.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.CloseDocuments">
+            <summary>
+            Closes all document windows.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.CloseTools">
+            <summary>
+            Closes all tool windows.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.CloseAll">
+            <summary>
+            Closes all windows.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockManager.WriteXml(System.String)">
+            <summary>
+            Writes the complete hierarchy to a file.
+            </summary>
+            <param name="file">The target XML file.</param>
+        </member>
+        <member name="M:DockDotNET.DockManager.ReadXml(System.String)">
+            <summary>
+            Reads the complete hierarchy from a file.
+            </summary>
+            <param name="file">The source XML file.</param>
+        </member>
+        <member name="T:DockDotNET.DockPanel">
+            <summary>
+            This class is derived from the standard framework class <see cref="T:System.Windows.Forms.Panel"/>.
+            It is used as final container of the window's controls and is transferred between <see cref="T:DockDotNET.DockContainer"/> objects and the window.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockPanel.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockPanel.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <seealso cref="T:System.Windows.Forms.Panel"/> class.
+            </summary>
+            <param name="container">The host container.</param>
+        </member>
+        <member name="M:DockDotNET.DockPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <seealso cref="T:System.Windows.Forms.Panel"/> class.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockPanel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockPanel.TabRect">
+            <summary>
+            Gets or sets the rectangle of the tab panel.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockPanel.Form">
+            <summary>
+            Gets or sets the host window.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockPanel.MinFormSize">
+            <summary>
+            Gets or sets the minimum size of the form.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockPanel.MaxFormSize">
+            <summary>
+            Gets or sets the maximum size of the form.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockPanel.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Overrides the base class function OnMouseDown.
+            Used to set the focus to the parent control.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the mouse event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockPanel.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>
+            Overrides the base class function IsInputKey.
+            </summary>
+            <param name="keyData">The key that is to be evaluated.</param>
+            <returns>Always set to true.</returns>
+        </member>
+        <member name="M:DockDotNET.DockPanel.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Overrides the base class function OnPaint.
+            Fires the PostPaint event after drawing the contents.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the paint data.</param>
+        </member>
+        <member name="M:DockDotNET.DockPanel.ToString">
+            <summary>
+            Overrides the base class function ToString.
+            </summary>
+            <returns>The caption string of the attached form.</returns>
+        </member>
+        <member name="E:DockDotNET.DockPanel.PostPaint">
+            <summary>
+            Occurs after the base drawing is finished.
+            </summary>
+        </member>
+        <member name="E:DockDotNET.DockPanel.Activated">
+            <summary>
+            Occurs when the panel gets activated.
+            </summary>
+        </member>
+        <member name="E:DockDotNET.DockPanel.Deactivate">
+            <summary>
+            Occurs when the panel gets deactivated.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockPanel.SetFocus(System.Boolean)">
+            <summary>
+            Sets the focus to the panel.
+            </summary>
+            <param name="activate">True, if the panel is activated.</param>
+        </member>
+        <member name="M:DockDotNET.DockPanel.WriteXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Writes the panel data to the window save list.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlTextWriter"/> object that writes to the target stream.</param>
+        </member>
+        <member name="M:DockDotNET.DockPanel.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads the panel data from the window save list.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader"/> object that reads from the source stream.</param>
+            <returns>The success of the operation</returns>
+        </member>
+        <member name="M:DockDotNET.DockPanel.SelectTab">
+            <summary>
+            Selects this panel as the active panel in the <see cref="T:DockDotNET.DockContainer"/> parent.
+            </summary>
+        </member>
+        <member name="T:DockDotNET.DockContainerType">
+            <summary>
+            Enumerates the standard types for dockable windows.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainerType.None">
+            <summary>
+            No docking features enabled.
+            This window will behave normally.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainerType.Document">
+            <summary>
+            The window will get the document status.
+            Document windows can solely be added (fill or split) to other documents.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockContainerType.ToolWindow">
+            <summary>
+            The window will get the tool window status.
+            Tool windows may be docked everywhere.
+            </summary>
+        </member>
+        <member name="T:DockDotNET.DockWindow">
+            <summary>
+            The DockWindow class is derived from the standard framework class System.Windows.Forms.Form.
+            It prepares the window for docking with the help of an own container of the DockPanel type.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.DockWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DockDotNET.DockWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.DockType">
+            <summary>
+            Gets or sets the dock element type.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.AllowUnDock">
+            <summary>
+            Allow this window to be undocked.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.AllowClose">
+            <summary>
+            Allow this window to be closed.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.AllowDock">
+            <summary>
+            Allow other windows or containers to dock into this one.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.AllowSplit">
+            <summary>
+            Allow other windows to split the control container.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.AllowSave">
+            <summary>
+            Allow the framework to save and restore the window position.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.ControlContainer">
+            <summary>
+            Gets the panel that is connected to this window. All controls are transferred to this container yielding an exact copy of the window content.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.DragTarget">
+            <summary>
+            Gets the retrieved target of a drag operation.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.HostContainer">
+            <summary>
+            Gets the container of the associated panel (null if not docked).
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.IsDocked">
+            <summary>
+            Gets the docking state of the window.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.WasDocked">
+            <summary>
+            Gets the docking state after last close.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.IsLoaded">
+            <summary>
+            Gets the loaded flag.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.Focused">
+            <summary>
+            Overwrites the Focused property from the base class.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.ShowFormAtOnLoad">
+            <summary>
+            This property is used by the DockContainer class while docking a form directly to a container,
+            to prevent the form from being shown for a short time.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.OnLoad(System.EventArgs)">
+            <summary>
+            Calls the <see cref="M:DockDotNET.DockWindow.CreateContainer"/> function, if not in design mode.
+            Raises the Load event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.CreateContainer">
+            <summary>
+            Creates the control container and fills it with the controls contained by the window.
+            The controls will behave like at design time.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.Release">
+            <summary>
+            Releases the window from its host container.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.OnTextChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.TextChanged"/> event.
+            Used also to set the text of the host container.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>
+            Overrides the OnLayout event handler.
+            </summary>
+            <param name="levent">A LayoutEventArgs object.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.InvokeKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Invokes the KeyDown event.
+            Is used as interface to the key routines of the <see cref="T:DockDotNET.DockManager"/>.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.InvokeKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Invokes the KeyUp event.
+            Is used as interface to the key routines of the <see cref="T:DockDotNET.DockManager"/>.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.KeyEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.Show">
+            <summary>
+            Displays the window to the user.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.Hide">
+            <summary>
+            Conceals the windows from the user.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.Close">
+            <summary>
+            Closes the window.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.Visible">
+            <summary>
+            Gets or sets a value indicating whether the control and all its parent controls are displayed.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.IsVisible">
+            <summary>
+            Gets the real visibility state of the window contents.
+            Use this property instead of Visible, since it can not be overridden.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.DockWindow.HideOnClose">
+            <summary>
+            Gets or sets a flag that prevents the window from closing.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.DockWindow.OnVisibleChanged(System.EventArgs)">
+            <summary>
+            Implements the VisibleChanged event of the base class.
+            Releases the window if showed.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.Focus">
+            <summary>
+            Sets the focus to the <see cref="T:DockDotNET.DockForm"/> or selects the <see cref="T:DockDotNET.DockPanel"/> in its <see cref="T:DockDotNET.DockContainer"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DockDotNET.DockWindow.WriteXml(System.Xml.XmlTextWriter)">
+            <summary>
+            Writes user specific data to the window save list.
+            </summary>
+            <param name="writer">The <see cref="T:System.Xml.XmlTextWriter"/> object that writes to the target stream.</param>
+        </member>
+        <member name="M:DockDotNET.DockWindow.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Reads user specific data from the window save list.
+            </summary>
+            <param name="reader">The <see cref="T:System.Xml.XmlReader"/> object that reads from the source stream.</param>
+        </member>
+        <member name="T:DockDotNET.FlatButton">
+            <summary>
+            Summary description for FlatButton.
+            </summary>
+        </member>
+        <member name="F:DockDotNET.FlatButton.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.FlatButton.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DockDotNET.FlatButton"/> class.
+            </summary>
+            <param name="container">The host container.</param>
+        </member>
+        <member name="M:DockDotNET.FlatButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DockDotNET.FlatButton"/> class.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.FlatButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.FlatButton.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FlatButton.LightColor">
+            <summary>
+            Gets or sets the light color of the border, when highlighted or pressed.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FlatButton.ShadowColor">
+            <summary>
+            Gets or sets the shadow color of the border, when highlighted or pressed.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FlatButton.SelectColor">
+            <summary>
+            Gets or sets the shadow color of the border, when highlighted or pressed.
+            </summary>
+        </member>
+        <member name="P:DockDotNET.FlatButton.Pressed">
+            <summary>
+            Gets the pressed state of the button.
+            </summary>
+        </member>
+        <member name="E:DockDotNET.FlatButton.PostPaint">
+            <summary>
+            Use this event to add custom painting to the control.
+            The user may draw over the standard layout.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.FlatButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Performs the drawing actions for the basic layout including highlighting.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.FlatButton.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Occurs when the mouse pointer enters the control.
+            Controls highlighting.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains no event data.</param>
+        </member>
+        <member name="M:DockDotNET.FlatButton.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Occurs when the mouse pointer leaves the control.
+            Controls highlighting.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains no event data.</param>
+        </member>
+        <member name="M:DockDotNET.FlatButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Occurs when the mouse pointer is over the control and a mouse button is pressed.
+            Controls the "Pressed" state.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:DockDotNET.FlatButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Occurs when the mouse pointer is over the control and a mouse button is released.
+            Controls the "Pressed" state.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:DockDotNET.OverlayForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DockDotNET.OverlayForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DockDotNET.OverlayForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

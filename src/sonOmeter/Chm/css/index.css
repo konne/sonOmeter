@@ -1,0 +1,79 @@
+BODY
+{
+    FONT-FAMILY: Verdana, Arial
+}
+A:link
+{
+    BORDER-TOP: medium none;
+    BORDER-BOTTOM: medium none;
+    COLOR: #666666;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    COLOR: #666666;
+    BORDER-BOTTOM: medium none;
+    TEXT-DECORATION: none; 
+}
+A:hover
+{
+	BORDER-RIGHT: medium none;
+	BACKGROUND-POSITION: center center;
+	BORDER-TOP: medium none;
+	BORDER-LEFT: medium none;
+	COLOR: #FF6600;
+	BORDER-BOTTOM: medium none;
+	text-decoration: underline;
+
+}
+.nav_link
+{
+    PADDING-RIGHT: 25px;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;    
+    PADDING-LEFT: 6px;
+    FONT-SIZE: 9pt;
+    CURSOR: hand;
+    COLOR: #666666;
+    PADDING-TOP: 1px;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-DECORATION: none
+}
+H1
+{
+    FONT-WEIGHT: 300;
+    FONT-SIZE: 13pt;
+    TEXT-DECORATION: none
+}
+P
+{
+    FONT-SIZE: 9pt
+}
+TD
+{
+    FONT-SIZE: 9pt
+}
+H2
+{
+    FONT-SIZE: 10pt
+}
+.pressetext {
+	font-size: 7pt;
+	text-align: justify;
+
+}
+.code {
+	font-family: "Courier New", Courier, mono;
+	background-color: #CCCCCC;
+	border: #000000;
+	width: 700px;
+	white-space: pre;
+	float: none;
+	left: 50px;
+
+
+}

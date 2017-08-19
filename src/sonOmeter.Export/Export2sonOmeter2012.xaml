@@ -1,0 +1,53 @@
+﻿<Window x:Class="sonOmeter.Export.Export2sonOmeter2012"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:myD="clr-namespace:sonOmeter.Data;assembly=sonOmeter.Data"
+        xmlns:myDD="clr-namespace:sonOmeter.Data.Devices;assembly=sonOmeter.Data"
+        xmlns:ukma="clr-namespace:ukmaLib.Threading.Design;assembly=ukmaLib"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Export to sonOmeter 2012" Height="300" Width="300" Icon="/sonOmeter.Export;component/Images/icon_16_32_64.ico">
+    <StackPanel>
+        <Button Margin="15,15,15,0" Padding="10,5" HorizontalAlignment="Center" Content="Projekt umwandeln und speichern" Click="SaveNewProject" />
+        <Label Margin="15" Padding="10,5" HorizontalAlignment="Center" Content="Status" Name="StatusLabel" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="278" />
+            </Grid.ColumnDefinitions>
+            <TreeView Grid.Column="0" Grid.IsSharedSizeScope="True">
+                <TreeView.Resources>
+                    <ukma:ProgressTaskInfoToVisibilityConverter x:Key="PTI2VisConv" ErrorVisibility="Hidden" Invisibility="Collapsed" />
+                    <DataTemplate DataType="{x:Type myDD:SonarDevice}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="Devices" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="{Binding Name}" Margin="0" Padding="2" />
+                        </Grid>
+                    </DataTemplate>
+                    <!--<HierarchicalDataTemplate DataType="{x:Type myD:SonarRecord}" ItemsSource="{Binding Path=Devices}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="Devices1" />
+                                <ColumnDefinition SharedSizeGroup="Devices2" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Content="{Binding Name}" Margin="0" Padding="2" />
+                            <ProgressBar Grid.Column="1" Width="50" Margin="2" Maximum="{Binding Path=TaskInfo.Maximum}" Value="{Binding Path=TaskInfo.Progress}" ToolTip="{Binding Path=TaskInfo.Percentage}">
+                                <ProgressBar.Visibility>
+                                    <MultiBinding Converter="{StaticResource PTI2VisConv}">
+                                        <Binding Path="TaskInfo.Progress" />
+                                        <Binding Path="TaskInfo.Maximum" />
+                                    </MultiBinding>
+                                </ProgressBar.Visibility>
+                            </ProgressBar>
+                        </Grid>
+                    </HierarchicalDataTemplate>-->
+                </TreeView.Resources>
+                <TreeViewItem x:Name="TreeDataSources" Header="Datenquellen" />
+                <TreeViewItem x:Name="TreeRecords" Header="Aufnahmen" ItemsSource="{Binding Path=ProjectNew.Records}" IsExpanded="True" />
+                <TreeViewItem x:Name="TreeProfiles" Header="Profile" />
+                <TreeViewItem x:Name="Tree3D" Header="3D" />
+            </TreeView>
+        </Grid>
+    </StackPanel>
+</Window>

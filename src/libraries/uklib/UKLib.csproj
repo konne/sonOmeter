@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A7C39D7-76B0-48C3-99CC-2F80DE5118ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UKLib</RootNamespace>
+    <AssemblyName>UKLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arrays\ByteArrays.cs" />
+    <Compile Include="Arrays\IDList.cs" />
+    <Compile Include="ExtendedAttributes\ExtendedAttributes.cs" />
+    <Compile Include="ExtendedAttributes\ExtendedTypeConverters.cs" />
+    <Compile Include="MathEx\QuarternionD.cs" />
+    <Compile Include="MathEx\RotD.cs" />
+    <Compile Include="MathEx\Vector3D.cs" />
+    <Compile Include="Xml\SerializeDictionary.cs" />
+    <Compile Include="Binary\BinaryStruct.cs" />
+    <Compile Include="Binary\EndianBinaryReaderWriter.cs" />
+    <Compile Include="Controls\FilterablePropertyBase.cs" />
+    <Compile Include="Controls\frmInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmInputBox.Designer.cs">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InputBox.cs" />
+    <Compile Include="Controls\RelScrollBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RelScrollBar.Designer.cs">
+      <DependentUpon>RelScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InstrumentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InstrumentControl.Designer.cs">
+      <DependentUpon>InstrumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debug\BeepThreadClass.cs" />
+    <Compile Include="Debug\DebugClass.cs" />
+    <Compile Include="DXF\DXFAtom.cs" />
+    <Compile Include="DXF\DXFBlock.cs" />
+    <Compile Include="DXF\DXFContainer.cs" />
+    <Compile Include="DXF\DXFDefinitions.cs" />
+    <Compile Include="DXF\DXFEntity.cs" />
+    <Compile Include="DXF\DXFLayer.cs" />
+    <Compile Include="DXF\DXFLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DXF\DXFLayerForm.Designer.cs">
+      <DependentUpon>DXFLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DXF\DXFLType.cs" />
+    <Compile Include="DXF\DXFSection.cs" />
+    <Compile Include="DXF\DXFShapes.cs" />
+    <Compile Include="ErrorList\ErrorList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ErrorList\ErrorList.Designer.cs">
+      <DependentUpon>ErrorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedAttributes\ExtendedTypeDescriptor.cs" />
+    <Compile Include="ExtendedAttributes\LocalizedAttributes.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\Autolist\AutoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\Autolist\TabListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\Caret.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\CodeEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\CodeEditorDesigner.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\Dialogs\FindReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\Dialogs\GotoLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\Dialogs\Settings.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\EditView\EditViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\Events.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\InfoTip\InfoTipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fireball\CodeEditor\Editors\IPainter.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\KeyboadActionList.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\KeyboardAction.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\Localizations.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\Painter_GDI.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\Selection.cs" />
+    <Compile Include="Fireball\CodeEditor\Editors\Structs.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\IKeyedCollection.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\ILightCollection.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\KeyedCollection.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\LightCollection.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\TreeCollection.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\TreeItem.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\TreeItemCollection.cs" />
+    <Compile Include="Fireball\Core\Collections\Generic\TreeItemEnumerator.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\FontEnum.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\GDIBrushes.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\GDIFont.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\GDIObject.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\GDIPens.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\GDISurface.cs" />
+    <Compile Include="Fireball\Core\Drawing\GDI\MemHandler.cs" />
+    <Compile Include="Fireball\Core\Drawing\Internal\GDIplus.cs" />
+    <Compile Include="Fireball\Core\Win32\Enums.cs" />
+    <Compile Include="Fireball\Core\Win32\NativeMethods.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\BlockType\BlockType.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\BlockType\BlockTypeCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\CollectionBase.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Formatting\FormatRange.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Formatting\FormatRangeCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Pattern\Pattern.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Pattern\PatternCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Pattern\PatternList.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Pattern\PatternListList.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Print\SourceCodePrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Row\Row.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Row\RowCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Row\Scope\Scope.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Row\Scope\ScopeCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Segment\Segment.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Segment\SegmentCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Structs.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\SyntaxDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\TextRange.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\TextStyle\TextStyle.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\TextStyle\TextStyleDesignerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\TextStyle\TextStyleUIEditor.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Undo\UndoBlock.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Undo\UndoBlockCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Undo\UndoBuffer.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Word\Word.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Document\Word\WordCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Export\HTMLExporter.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\IntCollection.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Language\Language.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Language\LanguageList.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Language\LanguageReader.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Parser\DefaultParser.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Parser\IParser.cs" />
+    <Compile Include="Fireball\SyntaxDocument\Syntax\Parser\ParseTools.cs" />
+    <Compile Include="Fireball\SyntaxFiles\CodeEditorSyntaxLoader.cs" />
+    <Compile Include="Fireball\Windows.Forms\BorderStyle.cs" />
+    <Compile Include="Fireball\Windows.Forms\Drawing\DrawingTools.cs" />
+    <Compile Include="Fireball\Windows.Forms\Events.cs" />
+    <Compile Include="Fireball\Windows.Forms\FormatLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\FormatLabelElement.cs" />
+    <Compile Include="Fireball\Windows.Forms\FormatLabelRow.cs" />
+    <Compile Include="Fireball\Windows.Forms\FormatLabelWord.cs" />
+    <Compile Include="Fireball\Windows.Forms\IntelliMouse.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\IntelliMouseEvents.cs" />
+    <Compile Include="Fireball\Windows.Forms\Listbox\Listbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\Listbox\ListBoxItem.cs" />
+    <Compile Include="Fireball\Windows.Forms\Listbox\ListBoxItemCollection.cs" />
+    <Compile Include="Fireball\Windows.Forms\RegionHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\SplitViewChildWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\SplitViewWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\ThumbControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fireball\Windows.Forms\Widget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Threading\GenericBackgroundWorker.cs" />
+    <Compile Include="Hex\HexFile.cs" />
+    <Compile Include="Hex\HexStrings.cs" />
+    <Compile Include="MathEx\BoxD.cs" />
+    <Compile Include="MathEx\Complex.cs" />
+    <Compile Include="MathEx\Crypto.cs" />
+    <Compile Include="MathEx\LineD.cs" />
+    <Compile Include="MathEx\MatrixC.cs" />
+    <Compile Include="MathEx\Matrix3D.cs" />
+    <Compile Include="MathEx\MatrixD.cs" />
+    <Compile Include="MathEx\Point3D.cs" />
+    <Compile Include="MathEx\PointD.cs" />
+    <Compile Include="MathEx\PolygonD.cs" />
+    <Compile Include="MathEx\RectangleD.cs" />
+    <Compile Include="Net\MacAddress.cs" />
+    <Compile Include="Net\MJPEGStream.cs" />
+    <Compile Include="Net\Sockets\TcpClient.cs" />
+    <Compile Include="Net\Sockets\TcpEventArgs.cs" />
+    <Compile Include="Net\Sockets\TcpServer.cs" />
+    <Compile Include="Net\Sockets\TcpThread.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickTime\movFile.cs" />
+    <Compile Include="Main\SingleApplication.cs" />
+    <Compile Include="Strings\FastConvert.cs" />
+    <Compile Include="Strings\HexListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Strings\HexListBox.Designer.cs">
+      <DependentUpon>HexListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Controls\CompassControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\CompassControl.Designer.cs">
+      <DependentUpon>CompassControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Controls\DeepMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\DeepMeter.Designer.cs">
+      <DependentUpon>DeepMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Controls\Editors\DatumEditor.cs" />
+    <Compile Include="Survey\Controls\Editors\EllipsoidEditor.cs" />
+    <Compile Include="Survey\Controls\Editors\frmSurveyEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\HorizonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\HorizonControl.Designer.cs">
+      <DependentUpon>HorizonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Controls\PositioningControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\PositioningControl.Designer.cs">
+      <DependentUpon>PositioningControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Controls\SatControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\SatControl.Designer.cs">
+      <DependentUpon>SatControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Controls\UbootControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Survey\Controls\UbootControl.Designer.cs">
+      <DependentUpon>UbootControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survey\Math\Coordinate.cs" />
+    <Compile Include="Survey\Math\Datum2WGS.cs" />
+    <Compile Include="Survey\Math\Ellipsoid.cs" />
+    <Compile Include="Survey\Math\Transform.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Survey\Math\Trigonometry.cs" />
+    <Compile Include="Survey\Parse\Compass.cs" />
+    <Compile Include="Survey\Parse\DA040.cs" />
+    <Compile Include="Survey\Parse\DepthGauge.cs" />
+    <Compile Include="Survey\Parse\DLSB30.cs" />
+    <Compile Include="Survey\Parse\FixedRVHV.cs" />
+    <Compile Include="Survey\Parse\Geodimeter.cs" />
+    <Compile Include="Survey\Parse\LatLong.cs" />
+    <Compile Include="Survey\Parse\LeicaTPS.cs" />
+    <Compile Include="Survey\Parse\NMEA.cs" />
+    <Compile Include="Survey\Parse\RD8000.cs" />
+    <Compile Include="Survey\Parse\SoSoZeiss.cs" />
+    <Compile Include="TreeView\CoolTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Xml\XMLSer.cs" />
+    <Compile Include="Xml\SerializeColor.cs" />
+    <Compile Include="Xml\XmlReadConvert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\frmInputBox.resx">
+      <DependentUpon>frmInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorList\ErrorList.resx">
+      <DependentUpon>ErrorList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\Autolist\AutoListForm.resx">
+      <DependentUpon>AutoListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\Autolist\TabListBox.resx">
+      <DependentUpon>TabListBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\CodeEditorControl.resx">
+      <DependentUpon>CodeEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\Dialogs\FindReplace.resx">
+      <DependentUpon>FindReplace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\Dialogs\GotoLine.resx">
+      <DependentUpon>GotoLine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\Dialogs\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\EditView\EditViewControl.resx">
+      <DependentUpon>EditViewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\CodeEditor\Editors\InfoTip\InfoTipForm.resx">
+      <DependentUpon>InfoTipForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Survey\Controls\Editors\frmSurveyEditor.resx">
+      <DependentUpon>frmSurveyEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Survey\Controls\UbootControl.resx">
+      <DependentUpon>UbootControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Survey\Math\Datum2WGS.resx">
+      <DependentUpon>Datum2WGS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Survey\Math\Ellipsoid.resx">
+      <DependentUpon>Ellipsoid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Survey\Math\Transform.resx">
+      <DependentUpon>Transform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeView\CoolTreeView.resx">
+      <DependentUpon>CoolTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ErrorList\imgs\error.bmp" />
+    <Content Include="ErrorList\imgs\error.png" />
+    <Content Include="ErrorList\imgs\error_w.png" />
+    <Content Include="ErrorList\imgs\message.bmp" />
+    <Content Include="ErrorList\imgs\message.png" />
+    <Content Include="ErrorList\imgs\message_w.png" />
+    <Content Include="ErrorList\imgs\warning.bmp" />
+    <Content Include="ErrorList\imgs\warning.png" />
+    <Content Include="ErrorList\imgs\warning_w.png" />
+    <Content Include="Fireball\CodeEditor\CodeEditorControl.bmp" />
+    <EmbeddedResource Include="Fireball\CodeEditor\FlippedCursor.cur">
+      <CustomToolNamespace>Fireball</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\SyntaxDocument\Syntax\Document\SyntaxDocument.resx">
+      <DependentUpon>SyntaxDocument.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\SyntaxDocument\Syntax\Document\TextStyle\TextStyleDesignerDialog.resx">
+      <DependentUpon>TextStyleDesignerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\Windows.Forms\IntelliMouse.resx">
+      <DependentUpon>IntelliMouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Fireball\Windows.Forms\Hand.cur" />
+    <EmbeddedResource Include="Fireball\Windows.Forms\MoveDown.cur" />
+    <EmbeddedResource Include="Fireball\Windows.Forms\MoveUp.cur" />
+    <EmbeddedResource Include="Fireball\Windows.Forms\MoveUpDown.cur" />
+    <EmbeddedResource Include="Images\Link.png" />
+    <Content Include="TreeView\Resources\Copy of treeview_checkbox_checked.bmp" />
+    <Content Include="TreeView\Resources\treeview_checkbox_checked.bmp" />
+    <Content Include="TreeView\Resources\treeview_checkbox_tristate.bmp" />
+    <Content Include="TreeView\Resources\treeview_checkbox_unchecked.bmp" />
+    <Content Include="TreeView\Resources\treeview_item.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\ASP.Syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Cobol.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\CPP.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\CSharp.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\CSS.Syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\DataFlex.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Delphi.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\DOSBatch.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Fortran90.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\FoxPro.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Java.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\JavaScript.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\JSP.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Lang6502.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\LotusScript.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\MSIL.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\MySQL_SQL.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\NPath.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Oracle_SQL.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Perl.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\PHP.Syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Povray.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Python.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\rtf.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\SmallTalk.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\SqlServer2K.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\SqlServer7.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\SystemPolicies.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Template.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\Text.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\TurboPascal.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\VB.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\VBNET.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\VBScript.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\VRML97.syn" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\InstrumentControl.resx">
+      <DependentUpon>InstrumentControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DXF\DXFLayerForm.resx">
+      <DependentUpon>DXFLayerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fireball\SyntaxFiles\Syns\XML.syn" />
+    <EmbeddedResource Include="Survey\Controls\SatControl.resx">
+      <DependentUpon>SatControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<HelpWorkshopProject>
+	<ProjectFile Name="Documentation.HxC"/>
+	<IncludeFile Name="includes.hxf"/>
+	<Files>
+		<File Url="Documentation.HxT"/>
+    <File Url="KLinks.HxK"/>
+    <File Url="ALinks.HxK"/>
+    <File Url="FLinks.HxK"/>
+    <File Url="NamedURL.HxK"/>
+    </Files>
+	<Dirs>
+	</Dirs>
+	<Options/>
+</HelpWorkshopProject>

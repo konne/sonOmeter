@@ -1,0 +1,23 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=sonOmeter.chm
+Contents file=sonOmeter.hhc
+Create CHI file=Yes
+Default Window=main
+Default topic=index.html
+Display compile notes=No
+Display compile progress=No
+Index file=Index.hhk
+Language=0x407 Deutsch (Deutschland)
+Title=sonOmeter 2.0 Help
+
+[WINDOWS]
+main=,"sonOmeter.hhc","Index.hhk","index.html","index.html","index.html","Test",,,0x42120,,0x3046,[30,50,980,750],,,,,,,0
+
+
+[FILES]
+index.html
+
+[INFOTYPES]
+

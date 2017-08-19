@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4AE56CB-B3EC-43FF-A0C5-39BD2AAFCA18}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>sonOmeter.Classes</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sonOmeter.Classes</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\sonOmeter\SlimDX\x64\SlimDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BuoyEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BlankLine.cs" />
+    <Compile Include="ColorScheme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CoordinateEditor.cs" />
+    <Compile Include="CoordinateFactory.cs" />
+    <Compile Include="MPConnEditor.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CutLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="D3DCamera.cs" />
+    <Compile Include="DXFFile.cs" />
+    <Compile Include="ExportFunction.cs">
+      <SubType>Code</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="ExportSettings.cs" />
+    <Compile Include="frmBuoyEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuoyEditor.Designer.cs">
+      <DependentUpon>frmBuoyEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuoySelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuoySelector.Designer.cs">
+      <DependentUpon>frmBuoySelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoordEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoordEditor.Designer.cs">
+      <DependentUpon>frmCoordEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMPConnEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMPConnEditor.Designer.cs">
+      <DependentUpon>frmMPConnEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPKTImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPKTImport.Designer.cs">
+      <DependentUpon>frmPKTImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalNotifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlobalSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Joystick.cs" />
+    <Compile Include="MRUManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewCoordsEventArgs.cs" />
+    <Compile Include="NewSonarLineEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Licence.cs" />
+    <Compile Include="ProjectEventArgs.cs" />
+    <Compile Include="SimulationThread.cs" />
+    <Compile Include="Sonar2DElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sonar3DRecord.cs">
+    </Compile>
+    <Compile Include="SonarDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SonarExport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SonarLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SonarPos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SonarProfile.cs" />
+    <Compile Include="SonarProject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SonarRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sonFileImport.cs" />
+    <Compile Include="Sonx.cs" />
+    <Compile Include="XPTableCoordColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPTableCoordEditor.cs" />
+    <EmbeddedResource Include="frmBuoyEditor.resx">
+      <DependentUpon>frmBuoyEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuoySelector.resx">
+      <DependentUpon>frmBuoySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoordEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCoordEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMPConnEditor.resx">
+      <DependentUpon>frmMPConnEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPKTImport.resx">
+      <DependentUpon>frmPKTImport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libraries\uklib\UKLib.csproj">
+      <Project>{3a7c39d7-76b0-48c3-99cc-2f80de5118ed}</Project>
+      <Name>UKLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libraries\XPTable\XPTable.csproj">
+      <Project>{1add2ecb-2b24-4162-8965-3efaa9bb041e}</Project>
+      <Name>XPTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.Server.Classes\sonOmeter.Server.Classes.csproj">
+      <Project>{36210C72-DB54-4E76-AE36-9D1AF6F017D5}</Project>
+      <Name>sonOmeter.Server.Classes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sonar3DCell.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

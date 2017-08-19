@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(SolutionDir)\.build</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" />
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2C817CF-A7C3-4A0C-AF8F-3C46B28D5A28}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Resources\icon_16_32_64.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>sonOmeter</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>sonOmeter</RootNamespace>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+    <StartupObject>sonOmeter.frmMain</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignManifests>false</SignManifests>
+    <ManifestCertificateThumbprint>092C13C1DCD142236498D5EC5AA174294F27B151</ManifestCertificateThumbprint>
+    <ManifestKeyFile>sonOmeter_TemporaryKey.pfx</ManifestKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\sonOmeter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\sonOmeter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>VideoLibs\$(PlatformTarget)\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.FFMPEG">
+      <HintPath>VideoLibs\$(PlatformTarget)\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SlimDX">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SlimDX\$(PlatformTarget)\SlimDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <ProjectReference Include="..\..\SourceForge\DockDotNET\lib\DockDotNET.csproj">
+      <Project>{611CD99D-5C85-49BC-BCD1-CA928A1A186C}</Project>
+      <Name>DockDotNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SourceForge\XPTable\XPTable.csproj">
+      <Project>{1ADD2ECB-2B24-4162-8965-3EFAA9BB041E}</Project>
+      <Name>XPTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UKLib\UKLib.csproj">
+      <Project>{3A7C39D7-76B0-48C3-99CC-2F80DE5118ED}</Project>
+      <Name>UKLib</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ukma-ukmalib\ukmaLib40.csproj">
+      <Project>{ee9a26ef-a4ed-4021-ab7e-fb5fd062345b}</Project>
+      <Name>ukmaLib40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.Classes\sonOmeter.Classes.csproj">
+      <Project>{B4AE56CB-B3EC-43FF-A0C5-39BD2AAFCA18}</Project>
+      <Name>sonOmeter.Classes</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.Export\sonOmeter.Export.csproj">
+      <Project>{2B0542AB-A72E-4400-9616-FBCA7B92BA42}</Project>
+      <Name>sonOmeter.Export</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.Server.Classes\sonOmeter.Server.Classes.csproj">
+      <Project>{36210C72-DB54-4E76-AE36-9D1AF6F017D5}</Project>
+      <Name>sonOmeter.Server.Classes</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.Server.Config\sonOmeter.Server.Config.csproj">
+      <Project>{067432CC-C71A-415B-8D46-FCF90F63F3DB}</Project>
+      <Name>sonOmeter.Server.Config</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.Server.Console\sonOmeter.Server.Console.csproj">
+      <Project>{6EE90CB0-FDB5-450D-8E2B-B218E86E3774}</Project>
+      <Name>sonOmeter.Server.Console</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\sonOmeter.SonarFlashLoader\sonOmeter.SonarFlashLoader.csproj">
+      <Project>{937D3DDA-A138-4B62-AA55-7F1A2B3CB8BA}</Project>
+      <Name>sonOmeter.SonarFlashLoader</Name>
+    </ProjectReference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VideoLibs\$(PlatformTarget)\avdevice-53.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>avdevice-53.dll</link>
+    </None>
+    <None Include="VideoLibs\$(PlatformTarget)\avcodec-53.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>avcodec-53.dll</link>
+    </None>
+    <None Include="VideoLibs\$(PlatformTarget)\avfilter-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>avfilter-2.dll</link>
+    </None>
+    <None Include="VideoLibs\$(PlatformTarget)\avformat-53.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>avformat-53.dll</link>
+    </None>
+    <None Include="VideoLibs\$(PlatformTarget)\avutil-51.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>avutil-51.dll</link>
+    </None>
+    <None Include="VideoLibs\$(PlatformTarget)\swresample-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>swresample-0.dll</link>
+    </None>
+    <None Include="VideoLibs\$(PlatformTarget)\swscale-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <link>swscale-2.dll</link>
+    </None>
+    <None Include="app.config" />
+    <None Include="Chm\sonOmeter.chi">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Chm\sonOmeter.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Chm\sonOmeter.hhc" />
+    <None Include="Chm\sonOmeter.hhp" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Key Bindings.xlsx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Forms\frmExport3D.resx">
+      <DependentUpon>frmExport3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGeoTag.resx">
+      <DependentUpon>frmGeoTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm1D.resx">
+      <DependentUpon>frm1D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAppError.resx">
+      <DependentUpon>frmAppError.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmManualPoints.resx">
+      <DependentUpon>frmManualPoints.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRDMeasure .resx">
+      <DependentUpon>frmRDMeasure .cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRenderVideo.resx">
+      <DependentUpon>frmRenderVideo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resx\frm2DStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frm2DStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\EditBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\frmSmallToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\frmSmallToolWindow.Designer.cs">
+      <DependentUpon>frmSmallToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Panel3D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SlideBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Sonar1DView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Sonar1DView.Designer.cs">
+      <DependentUpon>Sonar1DView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Sonar2DView.cs" />
+    <Compile Include="Controls\SonarColorCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SonarDepthMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SonarInfoBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SonarPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SonarStatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Events\BigControlEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\CoordEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\EditEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\RecordEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\TraceEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ZoomEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExport3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExport3D.Designer.cs">
+      <DependentUpon>frmExport3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGeoTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGeoTag.Designer.cs">
+      <DependentUpon>frmGeoTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm1D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm1D.Designer.cs">
+      <DependentUpon>frm1D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm2D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm2D.Designer.cs">
+      <DependentUpon>frm2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm3D.Designer.cs">
+      <DependentUpon>frm3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAppError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAppError.Designer.cs">
+      <DependentUpon>frmAppError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCamera.Designer.cs">
+      <DependentUpon>frmCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCompass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCompass.Designer.cs">
+      <DependentUpon>frmCompass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmControlBig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmControlBig.Designer.cs">
+      <DependentUpon>frmControlBig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDebug.Designer.cs">
+      <DependentUpon>frmDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDocList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDocList.Designer.cs">
+      <DependentUpon>frmDocList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExport.Designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHorizon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHorizon.Designer.cs">
+      <DependentUpon>frmHorizon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmManualInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManualInput.Designer.cs">
+      <DependentUpon>frmManualInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmManualPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManualPoints.Designer.cs">
+      <DependentUpon>frmManualPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPointEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPointEditor.Designer.cs">
+      <DependentUpon>frmPointEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPositioning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPositioning.Designer.cs">
+      <DependentUpon>frmPositioning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPositions.Designer.cs">
+      <DependentUpon>frmPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrepare3D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrepare3D.Designer.cs">
+      <DependentUpon>frmPrepare3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProject.Designer.cs">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPropertyViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPropertyViewer.Designer.cs">
+      <DependentUpon>frmPropertyViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRDMeasure .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRDMeasure .Designer.cs">
+      <DependentUpon>frmRDMeasure .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRecord.Designer.cs">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRenderVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRenderVideo.Designer.cs">
+      <DependentUpon>frmRenderVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSat.Designer.cs">
+      <DependentUpon>frmSat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSON2XML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSON2XML.Designer.cs">
+      <DependentUpon>frmSON2XML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUbootControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUbootControl.Designer.cs">
+      <DependentUpon>frmUbootControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVolWeight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVolWeight.Designer.cs">
+      <DependentUpon>frmVolWeight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="resx\frm2DStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frm2DStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Controls\EditBar.resx">
+      <DependentUpon>EditBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\frmSmallToolWindow.resx">
+      <DependentUpon>frmSmallToolWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SlideBar.resx">
+      <DependentUpon>SlideBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Sonar2DView.resx">
+      <DependentUpon>Sonar2DView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SonarDepthMeter.resx">
+      <DependentUpon>SonarDepthMeter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SonarInfoBar.resx">
+      <DependentUpon>SonarInfoBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SonarPanel.resx">
+      <DependentUpon>SonarPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SonarStatusBar.resx">
+      <DependentUpon>SonarStatusBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm2D.resx">
+      <DependentUpon>frm2D.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm3D.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCamera.resx">
+      <DependentUpon>frmCamera.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCompass.resx">
+      <DependentUpon>frmCompass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmControlBig.resx">
+      <DependentUpon>frmControlBig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDebug.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDocList.resx">
+      <DependentUpon>frmDocList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHorizon.resx">
+      <DependentUpon>frmHorizon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmManualInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmManualInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPointEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPointEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPositioning.resx">
+      <DependentUpon>frmPositioning.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPositions.resx">
+      <DependentUpon>frmPositions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrepare3D.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrepare3D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProject.resx">
+      <DependentUpon>frmProject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPropertyViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPropertyViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRecord.resx">
+      <DependentUpon>frmRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSat.resx">
+      <DependentUpon>frmSat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSON2XML.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSON2XML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUbootControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUbootControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVolWeight.resx">
+      <DependentUpon>frmVolWeight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Chm\aufnahme_manuell.html" />
+    <Content Include="Chm\bearbeitung.html" />
+    <Content Include="Chm\bearbeitung_beschneiden.html" />
+    <Content Include="Chm\bearbeitung_interpolierung.html" />
+    <Content Include="Chm\bearbeitung_posdaten.html" />
+    <Content Include="Chm\bearbeitung_varch.html" />
+    <Content Include="Chm\bearbeitung_2Dprofil.html" />
+    <Content Include="Chm\form_settings.html" />
+    <Content Include="Chm\export.html" />
+    <Content Include="Chm\export_ExportClass.html" />
+    <Content Include="Chm\export_ExportSettings.html" />
+    <Content Include="Chm\export_LineData.html" />
+    <Content Include="Chm\export_SonarLine.html" />
+    <Content Include="Chm\export_SonarPanelType.html" />
+    <Content Include="Chm\file_bojen.html" />
+    <Content Include="Chm\file_daten.html" />
+    <Content Include="Chm\file_formate.html" />
+    <Content Include="Chm\file_settings.html" />
+    <Content Include="Chm\imgs\form_2D_profile.png" />
+    <Content Include="Chm\imgs\form_manual_input_direct.PNG" />
+    <Content Include="Chm\form_project.html" />
+    <Content Include="Chm\imgs\colorlogo.gif" />
+    <Content Include="Chm\imgs\form_2D_track_nav.jpg" />
+    <Content Include="Chm\imgs\form_buoylist_editbuoy.PNG" />
+    <Content Include="Chm\imgs\form_buoylist_editconn.PNG" />
+    <Content Include="Chm\imgs\form_control.PNG" />
+    <Content Include="Chm\imgs\form_coordeditor_lalo.PNG" />
+    <Content Include="Chm\imgs\form_coordeditor_rvhv.PNG" />
+    <Content Include="Chm\imgs\form_manual_input_buoy.PNG" />
+    <Content Include="Chm\imgs\form_manual_input_conn.PNG" />
+    <Content Include="Chm\imgs\form_project.PNG" />
+    <Content Include="Chm\imgs\form_settings.png" />
+    <Content Include="Chm\imgs\form_sonar_config.PNG" />
+    <Content Include="Chm\imgs\rende.gif" />
+    <Content Include="Chm\imgs\rssss.gif" />
+    <Content Include="Chm\imgs\sonometer.de.gif" />
+    <Content Include="Chm\index.html" />
+    <Content Include="Chm\index2.html" />
+    <Content Include="Chm\koordinaten_editor.html" />
+    <Content Include="Chm\aufnahme.html" />
+    <Content Include="Chm\navigation_bojen.html" />
+    <Content Include="Chm\release_notes.html" />
+    <Content Include="Chm\sonOmeterServer.html" />
+    <Content Include="Chm\tastatur.html" />
+    <Content Include="Chm\tastatur_2D.html" />
+    <Content Include="Chm\tastatur_beschneidung.html" />
+    <Content Include="Chm\tastatur_record.html" />
+    <Content Include="Resources\2D.ico" />
+    <Content Include="Resources\Compass.ico" />
+    <Content Include="Resources\Controls.ico" />
+    <None Include="Resources\Link.png" />
+    <Content Include="Resources\Positioning.ico" />
+    <Content Include="Resources\Debug.ico" />
+    <Content Include="Resources\GridMoveRotate.bmp" />
+    <Content Include="Resources\Horizon.ico" />
+    <Content Include="Resources\icon_16_32_64.ico" />
+    <Content Include="Resources\Manual.ico" />
+    <Content Include="Resources\PinChecked.bmp" />
+    <Content Include="Resources\Positions.ico" />
+    <Content Include="Resources\Project.ico" />
+    <Content Include="Resources\Record.ico" />
+    <Content Include="Resources\Sat.ico" />
+    <Content Include="Resources\Settings.ico" />
+    <Content Include="Resources\sonOmeter_Banner.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sonOmeter_splash_screen_rect.png" />
+    <Content Include="Resources\VolWeight.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Defaults\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\GitVersionTask.3.3.0\build\portable-net+sl+win+wpa+wp\GitVersionTask.targets" Condition="Exists('..\packages\GitVersionTask.3.3.0\build\portable-net+sl+win+wpa+wp\GitVersionTask.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\GitVersionTask.3.3.0\build\portable-net+sl+win+wpa+wp\GitVersionTask.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GitVersionTask.3.3.0\build\portable-net+sl+win+wpa+wp\GitVersionTask.targets'))" />
+  </Target>
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="ZipPacked">
+    <Message Importance="High" Text="Version: $(GitVersion_FullSemVer)" />
+    <Message Importance="High" Text="OutputPath: $(OutputPath)" />
+    <CreateItem Include="$(OutputPath)\**\*.*" Exclude="$(OutputPath)\**\*.xml;$(OutputPath)\**\*.pdb">
+      <Output ItemName="XLLZipFiles" TaskParameter="Include" />
+    </CreateItem>
+    <Zip ZipFileName="bin\sonometer-$(GitVersion_FullSemVer)$(Platform).zip" WorkingDirectory="$(OutputPath)\" Files="@(XLLZipFiles)" />
+  </Target>
+  <Target Name="CheckGitStatus">
+    <GitPendingChanges>
+      <Output TaskParameter="HasPendingChanges" PropertyName="GitPendingChanges" />
+    </GitPendingChanges>
+    <Error Text="Git Pending Changes. Commit before Release Builds" Condition="'$(Configuration)' == 'Release' and $(GitPendingChanges)" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Message Importance="High" Text="OutputPath: $(OutputPath)" />
+    <CallTarget Targets="CheckGitStatus" Condition=" '$(Configuration)'=='Release' " />
+    <CallTarget Targets="ZipPacked" Condition=" '$(Configuration)'=='Release' " />
+  </Target>
+</Project>
