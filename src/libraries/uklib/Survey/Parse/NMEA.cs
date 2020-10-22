@@ -190,23 +190,32 @@ namespace UKLib.Survey.Parse
             {
                 try
                 {
+                    var d = 0.0;
+
                     switch (items[0].ToString())
                     {
                         case "$GPGGA":
                         case "$GNGGA":
-                            return Double.Parse(items[9], nfi);
+                            double.TryParse(items[9], NumberStyles.Any, nfi, out d);
+                            return d;
                         case "$GPGLL":
                         case "$GNGLL":
                             return 0;
-                        case "$PNTL": return Double.Parse(items[11], nfi);
+                        case "$PNTL":
+                            double.TryParse(items[11], NumberStyles.Any, nfi, out d);
+                            return d;
                         case "$GPLLK":
                         case "$GNLLK":
-                            return Double.Parse(items[10], nfi);
                         case "$GPLLQ":
                         case "$GNLLQ":
-                            return Double.Parse(items[10], nfi);
-                        case "$PTNL": return Double.Parse(items[11].Substring(4), nfi);
-                        default: return 0;
+                            double.TryParse(items[10], NumberStyles.Any, nfi, out d);
+                            return d;
+                        case "$PTNL":
+                            if (items[11]?.Length >= 4)
+                                double.TryParse(items[11].Substring(4), NumberStyles.Any, nfi, out d);
+                            return d;
+                        default:
+                            return 0;
                     }
                 }
                 catch

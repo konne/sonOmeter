@@ -59,8 +59,16 @@ namespace NSExportClass
                 case ExportVariant.Rech3D:
                     s += count.ToString().PadLeft(6, ' ');	// fortlaufenden Nummer
                     nfi.NumberDecimalDigits = 3;
-                    double RV = line.CoordRvHv.RV;
-                    double HV = line.CoordRvHv.HV;
+
+                    double RV = 0.0;
+                    double HV = 0.0;
+                    double AL = 0.0;
+                    if (line.CoordRvHv.Type != UKLib.Survey.Math.CoordinateType.Empty)
+                    {
+                        RV = line.CoordRvHv.RV;
+                        HV = line.CoordRvHv.HV;
+                        AL = line.CoordRvHv.AL;
+                    }
 
                     //double dx = -788628.878;
                     //double dy = -4683898.507;
@@ -88,7 +96,7 @@ namespace NSExportClass
                     s += "," + RV.ToString("F", nfi); // Rechtswert Sonar
                     s += "," + HV.ToString("F", nfi); // Hochwert Sonar
                     nfi.NumberDecimalDigits = 2;
-                    s += "," + line.CoordRvHv.AL.ToString("F", nfi); // Hoehe Sonar
+                    s += "," + AL.ToString("F", nfi); // Hoehe Sonar
                     s += "," + data.GetVolume().ToString("F", nfi); // Volume
                     s += "," + depth.ToString("F", nfi); // Tiefe
                     s += "," + colorid.ToString(); // Farbe

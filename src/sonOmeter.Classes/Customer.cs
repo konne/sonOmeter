@@ -31,6 +31,7 @@ namespace sonOmeter.Classes
         }
         #endregion
 
+        long count = 1;
         [Description("Set Start Count for Export"), Category("Export"), DefaultValue(0)]
         public long Count
         {
@@ -44,11 +45,13 @@ namespace sonOmeter.Classes
             }
         }
 
+        [DisplayName("Include empty coordinates"), Description("Include sonar lines with empty coodinates"), Category("Export"), DefaultValue(false)]
+        public bool IncludeEmptyCoordinates { get; set; } = false;
+
         #region Variables
         protected NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
         NumberFormatInfo nfiDE = new CultureInfo("de-DE", false).NumberFormat;
 
-        long count = 1;
         double? minDepth = null;
         double? maxDepth = null;
         double sumUKS = 0;
@@ -78,14 +81,17 @@ namespace sonOmeter.Classes
                 if (data == null)
                     return "";
 
-                if (depth.HasValue & (colorid > -1) & (line.CoordRvHv.Type != UKLib.Survey.Math.CoordinateType.Empty))
+                if (depth.HasValue & (colorid > -1) & ((line.CoordRvHv.Type != UKLib.Survey.Math.CoordinateType.Empty) || IncludeEmptyCoordinates))
                 {
                     #region Logging
                     if (!minDepth.HasValue || (depth > minDepth)) minDepth = depth;
                     if (!maxDepth.HasValue || (depth < maxDepth)) maxDepth = depth;
-                    if (!minUKS.HasValue || (line.CoordRvHv.AL < minUKS)) minUKS = line.CoordRvHv.AL;
-                    if (!maxUKS.HasValue || (line.CoordRvHv.AL > maxUKS)) maxUKS = line.CoordRvHv.AL;
-                    sumUKS += line.CoordRvHv.AL;
+                    if (line.CoordRvHv.Type != UKLib.Survey.Math.CoordinateType.Empty)
+                    {
+                        if (!minUKS.HasValue || (line.CoordRvHv.AL < minUKS)) minUKS = line.CoordRvHv.AL;
+                        if (!maxUKS.HasValue || (line.CoordRvHv.AL > maxUKS)) maxUKS = line.CoordRvHv.AL;
+                        sumUKS += line.CoordRvHv.AL;
+                    }
                     #endregion
 
                     string s = ExportLine(line, data, type, cfg, ref count, RecordNr, time, exportDate, depth.Value, colorid);

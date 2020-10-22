@@ -225,8 +225,8 @@ namespace sonOmeter
                                 switch (nmeaType)
                                 {
                                     case "$GPGGA":
-                                        d1 = nmea.Latitude.ToString();
-                                        d2 = nmea.Longitude.ToString();
+                                        d1 = nmea.Latitude?.ToString() ?? "-";
+                                        d2 = nmea.Longitude?.ToString() ?? "-";
                                         d3 = (GSC.Settings.UseWGSAltitude ? nmea.AltitudeWGS84 : nmea.Altitude).ToString("0.00");
                                         break;
                                     case "$GPLLK":
